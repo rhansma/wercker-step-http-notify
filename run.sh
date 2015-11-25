@@ -6,7 +6,8 @@ else
   export WERCKER_HTTP_NOTIFY_TYPE="deploy"
 fi
 
-curl -d "result=$WERCKER_RESULT" \
+curl -H $WERCKER_HTTP_NOTIFY_HEADER \
+     -d "result=$WERCKER_RESULT" \
      -d "type=$WERCKER_HTTP_NOTIFY_TYPE" \
      -d "application_owner_name=$WERCKER_APPLICATION_OWNER_NAME" \
      -d "application_name=$WERCKER_APPLICATION_NAME" \
