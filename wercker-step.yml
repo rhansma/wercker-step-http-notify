@@ -9,3 +9,6 @@ properties:
   url:
     type: string
     required: true
+  headers:
+    type: string
+    required: false
