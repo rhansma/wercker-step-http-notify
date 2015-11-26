@@ -9,6 +9,7 @@ Send http request to specified url(a.k.a. webhook)
 
 ### optional
  * `headers` - The headers send with the request, for example for authorization
+ * `method` - The request method used (eg. POST, GET)
 
 ## Passed parameters
 
@@ -29,4 +30,5 @@ Add HOOK_URL as deploy target or application environment variable.
           - robinhansma/http-notify:
               url: $HOOK_URL
               headers: $HOOK_HEADERS
+              method: $HOOK_REQUEST_METHOD
 
