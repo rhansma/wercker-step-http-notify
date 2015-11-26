@@ -8,7 +8,7 @@ fi
 
 # Default to request method to GET
 if [ ! -z "$WERCKER_HTTP_NOTIFY_METHOD" ]; then
-  $WERCKER_HTTP_NOTIFY_METHOD="GET"
+  WERCKER_HTTP_NOTIFY_METHOD="GET"
 fi
 
 # If headers defined send them, else dont send headers
