@@ -14,7 +14,7 @@ fi
 # If headers defined send them, else dont send headers
 if [ -z "$WERCKER_HTTP_NOTIFY_HEADER" ]; then
   curl -X $WERKCER_HTTP_NOTIFY_METHOD \
-       -H $WERCKER_HTTP_NOTIFY_HEADER \
+       -H "$WERCKER_HTTP_NOTIFY_HEADER" \
        -d "result=$WERCKER_RESULT" \
        -d "type=$WERCKER_HTTP_NOTIFY_TYPE" \
        -d "application_owner_name=$WERCKER_APPLICATION_OWNER_NAME" \
