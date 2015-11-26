@@ -7,6 +7,9 @@ Send http request to specified url(a.k.a. webhook)
 
  * `url` - Your webhook url
 
+### optional
+ * `headers` - The headers send with the request, for example for authorization
+
 ## Passed parameters
 
  * `result` - result of step. `passed` or not.
@@ -25,5 +28,5 @@ Add HOOK_URL as deploy target or application environment variable.
        after-steps:
           - robinhansma/http-notify:
               url: $HOOK_URL
-              headers: $HOOK_HEADERS (optional headers for authorization for example)
+              headers: $HOOK_HEADERS
 
