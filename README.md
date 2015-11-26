@@ -25,4 +25,5 @@ Add HOOK_URL as deploy target or application environment variable.
        after-steps:
           - mzp/http-notify:
               url: $HOOK_URL
+              headers: $HOOK_HEADERS (optional headers for authorization for example)
 
